@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Sofía Piña</title>
+    <link rel="stylesheet" href="Portafoliofinal.css">
+</head>
+<body>
+    <header>Portafolio - Sofía Piña</header>
+    <main>
+        <nav>
+            <button onclick="showGallery('ilustracion')">Ilustración</button>
+            <button onclick="showGallery('edicion')">Edición de Fotos</button>
+            <button onclick="showGallery('animacion')">Animación</button>
+        </nav>
+        <div id="galleryContainer">
+            <!-- Galería de Ilustraciones -->
+            <div id="ilustracion" class="gallery hidden">
+                <div class="gallery-item"><img src="ilustracion1.png" alt="Ilustración 1"></div>
+                <div class="gallery-item"><img src="ilustracion2.jpg" alt="Ilustración 2"></div>
+                <div class="gallery-item"><img src="ilustracion3.png" alt="Ilustración 3"></div>
+                <div class="gallery-item"><img src="ilustracion4.jpg" alt="Ilustración 4"></div>
+                <div class="gallery-item"><img src="ilustracion5.png"Ilustración 5"></div>
+                <div class="gallery-item"><img src="ilustracion6.png" alt="Ilustración 6"></div>
+            </div>
+            <!-- Galería de Edición de Fotos -->
+            <div id="edicion" class="gallery hidden">
+                <div class="gallery-item"><img src="edicion1.jpg" alt="Edición 1"></div>
+                <div class="gallery-item"><img src="edicion2.jpg" alt="Edición 2"></div>
+                <div class="gallery-item"><img src="edicion3.jpg" alt="Edición 3"></div>
+                <div class="gallery-item"><img src="edicion4.jpeg" alt="Edición 4"></div>
+                <div class="gallery-item"><img src="edicion6.jpg" alt="Edición 6"></div>
+            </div>
+            <!-- Galería de Animación -->
+            <div id="animacion" class="gallery hidden">
+                <div class="gallery-item"><video src="1.mp4" controls></video></div>
+                <div class="gallery-item"><video src="2.mp4" controls></video></div>
+                <div class="gallery-item"><video src="3.mp4" controls></video></div>
+              
+            </div>
+        </div>
+    </main>
+    <script>
+        function showGallery(galleryId) {
+            // Oculta todas las galerías
+            document.querySelectorAll('.gallery').forEach(gallery => {
+                gallery.classList.add('hidden');
+            });
+            // Muestra la galería seleccionada
+            document.getElementById(galleryId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
