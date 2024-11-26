@@ -42,20 +42,22 @@ nav button:hover {
 #galleryContainer {
     width: 75%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1rem;
-    justify-content: space-between;
 }
 
 /* Galerías */
 .gallery {
     display: none;
-    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-x: auto; /* Scroll horizontal para contenido largo */
     gap: 1rem;
+    padding-bottom: 1rem;
 }
 .gallery-item {
-    width: calc(33.33% - 1rem); /* Tres elementos por fila */
-    aspect-ratio: 16/9; /* Mantiene proporción */
+    flex: 0 0 auto; /* Evita que los elementos se contraigan */
+    width: 200px; /* Tamaño fijo para elementos */
+    aspect-ratio: 16/9;
     background-color: #fff;
     border: 2px solid #ccc;
     border-radius: 8px;
